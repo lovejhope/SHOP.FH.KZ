@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadCart()">
+
+<header class="topbar">
+    <div class="logo">SHOP.FH</div>
+
+    <nav class="menu">
+        <a href="index.html">Главная</a>
+        <a href="index.html#catalog">Каталог</a>
+    
+    </nav>
+</header>
+
+<main class="cart-page">
+    <div class="breadcrumbs">Главная / Корзина</div>
+
+    <h1 class="page-title">Ваша корзина</h1>
+
+    <div class="cart-layout">
+        <section class="cart-items-panel">
+            <div id="cart-items"></div>
+        </section>
+
+        <aside class="summary-panel">
+            <h2>Итог заказа</h2>
+
+            <div class="summary-row">
+                <span>Сумма</span>
+                <strong id="subtotal">0 ₸</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Скидка</span>
+                <strong id="discount">0 ₸</strong>
+            </div>
+
+            <div class="summary-row">
+                <span>Доставка</span>
+                <strong id="delivery">0 ₸</strong>
+            </div>
+
+            <div class="summary-total">
+                <span>Итого</span>
+                <strong id="total">0 ₸</strong>
+            </div>
+
+            <div class="promo-box">
+                <input type="text" id="promo-code" placeholder="Промокод">
+                <button type="button" onclick="applyPromo()">Применить</button>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">Перейти к оформлению</button>
+        </aside>
+    </div>
+</main>
+
+<div id="order-modal" class="modal">
+    <div class="modal-content">
+        <h2>Оформление заказа</h2>
+
+        <input type="text" id="order-name" placeholder="Ваше имя">
+        <input type="text" id="order-phone" placeholder="Телефон">
+        <input type="text" id="order-address" placeholder="Адрес доставки">
+
+        <button onclick="submitOrder()" class="modal-submit">Подтвердить заказ</button>
+        <button onclick="closeOrderForm()" class="modal-close">Закрыть</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

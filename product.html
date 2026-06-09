@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Товар</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="логотип">SHOP.FH</div>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="index.html#catalog">Каталог</a>
+        <a href="login.html">Вход</a>
+    
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10
+                0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9
+                2-2-.9-2-2-2zM7.17 14h9.66c.75
+                0 1.41-.41 1.75-1.03l3.58-6.49A1
+                1 0 0 0 21.3 5H5.21l-.94-2H1v2h2l3.6
+                7.59-1.35 2.44C4.52 16.37 5.48 18
+                7 18h12v-2H7l1.1-2z"/>
+            </svg>
+        </a>
+
+        <a href="register.html" class="icon-btn" title="Регистрация">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+                <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-4.4 
+                0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z"/>
+            </svg>
+        </a>
+
+    </nav>
+</header>
+
+<div class="product-container">
+
+    <div class="product-image">
+        <img id="product-img" src="" alt="">
+    </div>
+
+    <div class="product-info">
+
+        <h1 id="product-name"></h1>
+        <p class="price" id="product-price"></p>
+
+        <div class="options">
+
+            <label>Размер</label>
+            <select id="size">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+
+            <label>Цвет</label>
+            <select id="color">
+                <option>Чёрный</option>
+                <option>Белый</option>
+                <option>Коричневый</option>
+                <option>Зеленый</option>
+            </select>
+
+        </div>
+
+        <button class="add-btn" onclick="addToCartFromPage()">
+            Добавить в корзину
+        </button>
+
+    </div>
+
+</div>
+
+<!-- УВЕДОМЛЕНИЕ -->
+ <div id="toast" class="toast">
+    <img id="toast-img" src="" alt="">
+    <div>
+        <h4>✔ Добавлено в корзину</h4>
+        <p id="toast-text"></p>
+    </div>
+
+    <a href="cart.html" class="toast-btn">Открыть</a>
+</div>
+
+<script src="product.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
